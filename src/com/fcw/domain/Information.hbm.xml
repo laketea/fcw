@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.fcw.domain">
+	<class	name="Information"	table="Information_table">
+		<!-- 使用只读缓存 -->
+		
+		<!-- 映射标识属性 -->
+		<id	name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		
+		<!-- 映射普通属性 -->
+		<property name="channelName" column="channelName" type="string" length="50"/>
+		<property name="userName" column="userName" type="string" length="50"/>
+		<property name="userId" column="userId" type="integer" length="50"/>
+		<property name="name" column="name" type="string" length="50"/>
+		<property name="area" column="area" type="string" length="50"/>
+		<property name="year" column="year" type="string" length="50"/>
+		<property name="intro" column="intro" type="string" length="50"/>
+		<property name="filePath" column="filePath" type="string" length="50"/>
+		<property name="fileSize" column="fileSize" type="string" length="50"/>
+		<property name="fileType" column="fileType" type="string" length="50"/>
+		<property name="upTime" column="upTime" type="string" length="50"/>
+		<property name="vip" column="vip" type="integer" length="50"/>
+		<property name="coin" column="coin" type="integer" length="50"/>
+		<property name="gradeCount" column="gradeCount" type="integer" length="50"/>
+		<property name="score" column="score" type="integer" length="50"/>
+		<property name="aveScore" column="aveScore" type="integer" length="50"/>
+		<property name="examine" column="examine" type="integer" length="50"/>
+		<property name="admin" column="admin" type="integer" length="50"/>
+		<property name="dfRecmd" column="dfRecmd" type="integer" length="50"/>
+		<property name="dfSortNum" column="dfSortNum" type="integer" length="50"/>
+		<property name="status" column="status" type="integer" length="50"/>
+		<property name="downCount" column="downCount" type="integer" length="50"/>
+		<property name="viewCount" column="viewCount" type="integer" length="50"/>
+		<property name="channel_id" column="channel_id" type="integer" length="50"/>
+		<property name="pdRecmd" column="pdRecmd" type="integer" length="50"/>
+		<property name="pdSortNum" column="pdSortNum" type="integer" length="50"/>
+		<property name="zlDfRecmd" column="zlDfRecmd" type="integer" length="50"/>
+		<property name="zlDfNum" column="zlDfNum" type="integer" length="50"/>
+		
+		<!-- 与资料分类的多对一关系 -->
+		<many-to-one name="inforChannel" class="InforChannel"
+			fetch="select">
+			<column name="channelId" />
+		</many-to-one>
+	
+		<!-- 与用户的多对一关系
+		<many-to-one name="userInfo" class="UserInfo"
+			fetch="select">
+			<column name="userId" />
+		</many-to-one> -->
+
+	</class>
+</hibernate-mapping>

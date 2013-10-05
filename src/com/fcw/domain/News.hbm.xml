@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.fcw.domain">
+	<class	name="News"	table="News_table">
+		<!-- 使用只读缓存 -->
+		
+		<!-- 映射标识属性 -->
+		<id	name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		
+		<!-- 映射普通属性 -->
+		<property name="title" column="title" type="string" length="50"/>
+		<property name="simpleTitle" column="simpleTitle" type="string" length="50"/>
+		<property name="url" column="url" type="string" length="100"/>
+		<property name="description" column="description" type="string" length="50"/>
+		<property name="content" column="content" type="string" length="20000"/>
+		<property name="author" column="author" type="string" length="50"/>
+		<property name="pbTime" column="pbTime" type="string" length="50"/>
+		<property name="upCount" column="upCount" type="integer" length="50"/>
+		<property name="downCount" column="downCount" type="integer" length="50"/>
+		<property name="visitCount" column="visitCount" type="integer" length="50"/>
+		<property name="channelId" column="channelId" type="integer" length="50"/>
+		<property name="channelName" column="channelName" type="string" length="50"/>
+		<property name="status" column="status" type="integer" length="50"/>
+		<property name="dftStatus" column="dftStatus" type="integer" length="50"/>
+		<property name="dftNum" column="dftNum" type="integer" length="50"/>
+		<property name="topStatus" column="topStatus" type="integer" length="50"/>
+		<property name="zxTopStatus" column="zxTopStatus" type="integer" length="50"/>
+		<property name="topsNum" column="topsNum" type="integer" length="50"/>
+		<property name="zxTopNum" column="zxTopNum" type="integer" length="50"/>
+		<property name="topsStatus" column="topsStatus" type="integer" length="50" />
+		<property name="topNum" column="topNum" type="integer" length="50"/>
+		<property name="hasPhoto" column="hasPhoto" type="integer" length="50"/>
+		<property name="photo" column="photo" type="string" length="50"/>
+		<property name="newsSource" column="newsSource" type="integer" length="50"/>
+		<property name="siteName" column="siteName" type="string" length="50"/>
+		<property name="siteUrl" column="siteUrl" type="string" length="100"/>
+		<property name="fromUrl" column="fromUrl" type="integer" length="100"/>
+
+	</class>
+</hibernate-mapping>

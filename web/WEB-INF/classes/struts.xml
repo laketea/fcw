@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<!-- Struts2配置文件的根元素 -->
+<struts>
+	<!-- 是否显示详细错误信息 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 国际化资源文件名称 -->
+
+	<!-- 配置使用Spring管理Action -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<constant name="struts.multipart.saveDir" value="temp"></constant>
+	<!-- 编码 -->
+	<constant name="struts.multipart.maxSize" value="100000000" />
+	<!-- 后缀 -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 结果资源的路径 -->
+	<constant name="struts.convention.result.path" value="/WebContent/" />
+	<!-- spring 缓存机制 -->
+	<constant name="struts.objectFactory.spring.useClassCache"
+		value="false" />
+
+
+	<package name="basePackage" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="baseStack">
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="debugging" />
+				<interceptor-ref name="scopedModelDriven" />
+				<interceptor-ref name="modelDriven" />
+				<interceptor-ref name="fileUpload" />
+				<interceptor-ref name="checkbox" />
+				<interceptor-ref name="multiselect" />
+				<interceptor-ref name="staticParams" />
+				<interceptor-ref name="actionMappingParams" />
+				<interceptor-ref name="params">
+					<param name="excludeParams">dojo\..*,^struts\..*</param>
+				</interceptor-ref>
+				<interceptor-ref name="conversionError" />
+				<!-- 配置方法级别的校验 -->
+				<interceptor-ref name="validation">
+					<param name="excludeMethods">input,back,cancel,browse</param>
+					<param name="validateAnnotatedMethodOnly">true</param>
+				</interceptor-ref>
+				<interceptor-ref name="workflow">
+					<param name="excludeMethods">input,back,cancel,browse</param>
+				</interceptor-ref>
+			</interceptor-stack>
+
+			<interceptor name="adminAuth"
+				class="com.fcw.action.authority.AdminAuthorityInterceptor" />
+
+			<interceptor name="cacheInterceptor"
+				class="com.fcw.action.interceptor.CacheInterceptor" />
+			<interceptor name="userCenterInterceptor"
+				class="com.fcw.action.interceptor.UserCenterInterceptor" />
+			<interceptor name="userCenterBlogInterceptor"
+				class="com.fcw.action.interceptor.UserCenterBlogInterceptor" />
+
+
+			<!-- 默认拦截器栈 -->
+			<interceptor-stack name="defaultStack">
+				<interceptor-ref name="baseStack" />
+				<!--<interceptor-ref name="adminAuth"> <param name="excludeMethods">login,blogInit,blog,edit,save,publish,msglist,ajaxLogin,download,checkup,info,add,list,comment,channel,execute,search,adminLogin,step2,loginOut,reg,upload,index,show,channel,checkEmailExsit,checkNickExsit,upload</param> 
+					</interceptor-ref> -->
+			</interceptor-stack>
+
+			<!-- 自动更新缓存的拦截器栈 -->
+			<interceptor-stack name="cacheStack">
+				<interceptor-ref name="baseStack" />
+				<interceptor-ref name="cacheInterceptor">
+					<param name="includeMethods "></param>
+				</interceptor-ref>
+			</interceptor-stack>
+
+			<!-- 用户中心登录检查栈 -->
+			<interceptor-stack name="userCenterStack">
+				<interceptor-ref name="baseStack" />
+				<interceptor-ref name="userCenterInterceptor" />
+			</interceptor-stack>
+
+			<!-- 用户中心博客是否开通检查栈 -->
+			<interceptor-stack name="userCenterBlogStack">
+				<interceptor-ref name="baseStack" />
+				<interceptor-ref name="userCenterInterceptor" />
+				<interceptor-ref name="userCenterBlogInterceptor" />
+			</interceptor-stack>
+
+		</interceptors>
+
+
+
+		<!-- 配置默认拦截器栈 -->
+		<default-interceptor-ref name="defaultStack" />
+
+		<!-- 未到找Action指向页面 -->
+		<default-action-ref name="errorPage" />
+
+		<global-results>
+			<result name="ajaxDone">/admin/common/ajaxDone.jsp</result>
+			<result name="ajaxTimeOut">/admin/common/ajaxTimeout.html</result>
+			<result name="usercenter_not_login">/usercenter/usercenter-disable.jsp</result>
+			<result name="usercenter_blog_not_init">/usercenter/usercenter-blog-disable.jsp</result>
+		</global-results>
+
+		<action name="errorPage">
+			<result type="redirect">/admin/common/error_page_404.html</result>
+		</action>
+
+
+	</package>
+
+	<!-- 前端访问包 -->
+	<package name="views" extends="basePackage" namespace="/">
+		<action name="user" class="com.fcw.action.front.UserAction">
+			<result name="index">/index.jsp</result>
+			<result name="usercenter">/user/usercenter.jsp</result>
+			<result name="input">/user/reg.jsp</result>
+			<result name="logininput">/user/login.jsp</result>
+		</action>
+
+		<action name="fcnews" class="com.fcw.action.front.NewsAction">
+			<result name="index">/news/index.jsp</result>
+			<result name="newscolumn">/news/newscolumn.jsp</result>
+			<result name="news">/news/news.jsp</result>
+		</action>
+
+		<action name="business" class="com.fcw.action.front.BusinessAction">
+			<result name="index">/business/index.jsp</result>
+			<result name="show">/business/show.jsp</result>
+			<result name="search">/business/search.jsp</result>
+		</action>
+
+		<action name="information" class="com.fcw.action.front.InforAction">
+			<result name="index">/information/index.jsp</result>
+			<result name="channel">/information/channel.jsp</result>
+			<result name="search">/information/search.jsp</result>
+			<result name="show">/information/show.jsp</result>
+		</action>
+
+		<action name="download" class="com.fcw.action.front.DownLoadAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+			</result>
+		</action>
+
+		<action name="reward" class="com.fcw.action.front.RewardAction">
+			<result name="index">/information/rewardchannel.jsp</result>
+			<result name="show">/information/rewardshow.jsp</result>
+		</action>
+
+		<action name="resource" class="com.fcw.action.front.ResourceAction">
+			<result name="index">/resources/index.jsp</result>
+			<result name="channel">/resources/channel.jsp</result>
+			<result name="show">/resources/show.jsp</result>
+			<result name="search">/resources/search.jsp</result>
+		</action>
+
+		<action name="default" class="com.fcw.action.front.DefaultAction">
+			<result name="index">/default/index.jsp</result>
+		</action>
+
+		<action name="newschannel" class="com.fcw.action.front.NewsChannelAction">
+			<result name="channel">/news/channel.jsp</result>
+			<result name="show">/news/show.jsp</result>
+			<result name="search">/news/search.jsp</result>
+		</action>
+
+		<action name="comment" class="com.fcw.action.front.CommentAction">
+			<result name="channel">/news/channel.jsp</result>
+			<result name="show">/news/show.jsp</result>
+		</action>
+
+		<!-- Random验证码 -->
+		<action name="rand" class="com.fcw.action.common.RandomAction">
+			<result type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+
+
+	</package>
+
+
+
+
+	<!-- 用户中心 -->
+	<package name="usercenter" extends="basePackage" namespace="/">
+
+		<default-interceptor-ref name="userCenterStack" />
+
+		<action name="userfile" class="com.fcw.action.usercenter.UserFileAction">
+			<result name="userfile">/usercenter/user-file-list.jsp</result>
+			<result name="download">/usercenter/user-file-download.jsp</result>
+			<result name="upload">/usercenter/user-file-upload.jsp</result>
+			<result name="reward-list">/usercenter/user-reward-list.jsp</result>
+			<result name="publish-reward">/usercenter/user-reward-pb.jsp</result>
+			<result name="sucessed">/usercenter/user-file-pb-sucessed.jsp</result>
+		</action>
+		<action name="usertender" class="com.fcw.action.usercenter.UserTenderAction">
+			<result name="list">/usercenter/user-tender-list.jsp</result>
+			<result name="msg-list">/usercenter/user-tender-msg-list.jsp</result>
+			<result name="sucessed">/usercenter/user-tender-sucessed.jsp</result>
+		</action>
+		<action name="userfileupload" class="com.fcw.action.usercenter.UserFileUploadAction">
+			<result name="sucessed">/usercenter/user-file-upload-sucessed.jsp
+			</result>
+
+		</action>
+
+		<action name="userinfo" class="com.fcw.action.usercenter.UserInfoAction">
+			<result name="edit">/usercenter/user-info-edit.jsp</result>
+			<result name="blog">/usercenter/user-info-blog.jsp</result>
+		</action>
+
+		<action name="userrecord" class="com.fcw.action.usercenter.UserRecordAction">
+			<result name="record">/usercenter/user-record.jsp</result>
+		</action>
+
+		<action name="userart" class="com.fcw.action.usercenter.UserArtAction">
+			<result name="my">/usercenter/user-art-my.jsp</result>
+			<result name="others">/usercenter/user-art-others.jsp</result>
+			<result name="sucessed">/usercenter/user-art-publish-sucessed.jsp
+			</result>
+			<result name="publish">/usercenter/user-art-publish.jsp</result>
+		</action>
+		<action name="userfriend" class="com.fcw.action.usercenter.UserFriendAction">
+			<result name="list">/usercenter/user-friend.jsp</result>
+			<result name="applylist">/usercenter/user-friend-applylist.jsp</result>
+			<result name="visit">/usercenter/user-friend-visit.jsp</result>
+			<result name="find">/usercenter/user-friend-find.jsp</result>
+		</action>
+
+
+
+		<!-- 博客相关 -->
+		<action name="blogguest" class="com.fcw.action.blog.GuestAction">
+			<result name="list">/blog/guest.jsp</result>
+		</action>
+		<action name="blogfriend" class="com.fcw.action.blog.FriendAction">
+			<result name="index">/blog/friend.jsp</result>
+		</action>
+		<action name="blogarticle" class="com.fcw.action.blog.ArtAction">
+			<result name="index">/blog/article.jsp</result>
+			<result name="show">/blog/article-show.jsp</result>
+		</action>
+
+		<action name="blogrecord" class="com.fcw.action.blog.RecordAction">
+			<result name="index">/blog/record.jsp</result>
+		</action>
+
+		<action name="blog" class="com.fcw.action.blog.BlogAction">
+			<result name="index">/blog/index.jsp</result>
+		</action>
+
+	</package>
+
+
+
+
+
+	<!-- 后台管理访问包 -->
+	<package name="admin" extends="basePackage" namespace="/admin">
+		<action name="adminList" class="com.fcw.action.admin.AdminAction"
+			method="list">
+			<result name="list">/admin/admin/admin_list.jsp</result>
+		</action>
+		<action name="admin" class="com.fcw.action.admin.AdminAction">
+			<result name="list">/admin/admin/admin_list.jsp</result>
+			<result name="edit">/admin/admin/edit.jsp</result>
+			<result name="logininput">/admin/index.jsp</result>
+			<result name="adminindex">/admin/admin.jsp</result>
+		</action>
+		<action name="news" class="com.fcw.action.admin.NewsAction">
+			<result name="list">/admin/news/list.jsp</result>
+			<result name="dcxwlist">/admin/news/list-dcxw.jsp</result>
+			<result name="yjkdlist">/admin/news/list-yjkd.jsp</result>
+			<result name="jlhdlist">/admin/news/list-jlhd.jsp</result>
+			<result name="shxklist">/admin/news/list-shxk.jsp</result>
+			<result name="rwljlist">/admin/news/list-rwlj.jsp</result>
+			<result name="photolist">/admin/news/list-photo.jsp</result>
+			<result name="hdbblist">/admin/news/list-hdbb.jsp</result>
+			<result name="edit">/admin/news/edit.jsp</result>
+			<result name="edit2">/admin/news/edit2.jsp</result>
+			<result name="edit3">/admin/news/edit3.jsp</result>
+			<result name="add">/admin/news/add.jsp</result>
+			<result name="add2">/admin/news/add2.jsp</result>
+			<result name="add3">/admin/news/add3.jsp</result>
+		</action>
+		<action name="newsChannel" class="com.fcw.action.admin.NewsChannelAction">
+			<result name="list">/admin/newschannel/list.jsp</result>
+			<result name="edit">/admin/newschannel/edit.jsp</result>
+		</action>
+		<action name="users" class="com.fcw.action.admin.UsersAction">
+			<result name="list">/admin/users/list.jsp</result>
+			<result name="normallist">/admin/users/normal-list.jsp</result>
+			<result name="companylist">/admin/users/company-list.jsp</result>
+			<result name="unveritylist">/admin/users/unverity-list.jsp</result>
+			<result name="edit">/admin/users/edit.jsp</result>
+		</action>
+		<action name="userInfo" class="com.fcw.action.admin.UserInfoAction">
+			<result name="list">/admin/userinfo/list.jsp</result>
+			<result name="edit">/admin/userinfo/edit.jsp</result>
+		</action>
+		<action name="resourceChannel" class="com.fcw.action.admin.ResourceChannelAction">
+			<result name="list">/admin/resourcechannel/list.jsp</result>
+			<result name="edit">/admin/resourcechannel/edit.jsp</result>
+			<result name="add">/admin/resourcechannel/add.jsp</result>
+		</action>
+		<action name="resource" class="com.fcw.action.admin.ResourceAction">
+			<result name="add">/admin/resource/add.jsp</result>
+			<result name="list">/admin/resource/list.jsp</result>
+			<result name="edit">/admin/resource/edit.jsp</result>
+		</action>
+		<action name="resourceVisit" class="com.fcw.action.admin.ResourceVisitAction">
+			<result name="list">/admin/resourcevisit/list.jsp</result>
+			<result name="edit">/admin/resourcevisit/edit.jsp</result>
+		</action>
+		<action name="tender" class="com.fcw.action.admin.TenderAction">
+			<result name="list">/admin/tender/list.jsp</result>
+			<result name="edit">/admin/tender/edit.jsp</result>
+		</action>
+		<action name="tenderGuest" class="com.fcw.action.admin.TenderGuestAction">
+			<result name="list">/admin/tenderguest/list.jsp</result>
+			<result name="edit">/admin/tenderguest/edit.jsp</result>
+		</action>
+		<action name="inforChannel" class="com.fcw.action.admin.InforChannelAction">
+			<result name="list">/admin/inforchannel/list.jsp</result>
+			<result name="edit">/admin/inforchannel/edit.jsp</result>
+			<result name="add">/admin/inforchannel/add.jsp</result>
+		</action>
+		<action name="information" class="com.fcw.action.admin.InformationAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					application/zip,text/plain,application/octet-stream,application/x-rar-compressed,application/octet-stream,
+					application/x-tex,image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/pjpeg,application/msword,application/vnd.ms-excel,application/x-shockwave-flash,flv-application/octet-stream,video/x-flv
+				</param>
+				<param name="maximumSize">100000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="list">/admin/information/list.jsp</result>
+			<result name="exlist">/admin/information/exlist.jsp</result>
+			<result name="edit">/admin/information/edit.jsp</result>
+			<result name="add">/admin/information/add.jsp</result>
+		</action>
+		<action name="downLoad" class="com.fcw.action.admin.DownLoadAction">
+			<result name="list">/admin/download/list.jsp</result>
+			<result name="edit">/admin/download/edit.jsp</result>
+		</action>
+		<action name="mutliSite" class="com.fcw.action.admin.MutliSiteAction">
+			<result name="list">/admin/mutlisite/list.jsp</result>
+			<result name="edit">/admin/mutlisite/edit.jsp</result>
+		</action>
+		<action name="slide" class="com.fcw.action.admin.SlideAction">
+			<result name="list">/admin/slide/list.jsp</result>
+			<result name="edit">/admin/slide/edit.jsp</result>
+		</action>
+		<action name="webcfg" class="com.fcw.action.admin.WebCfgAction">
+			<result name="show">/admin/webcfg/webcfg.jsp</result>
+		</action>
+		<action name="adv" class="com.fcw.action.admin.AdvAction">
+			<result name="list">/admin/adv/list.jsp</result>
+			<result name="add">/admin/adv/add.jsp</result>
+			<result name="edit">/admin/adv/edit.jsp</result>
+		</action>
+		<action name="upload" class="com.fcw.action.admin.UploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					application/x-tex,image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/pjpeg,application/msword,application/vnd.ms-excel,application/x-shockwave-flash,flv-application/octet-stream,video/x-flv
+				</param>
+				<param name="maximumSize">100000000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="result">/admin/common/result.jsp</result>
+		</action>
+
+		<action name="hotWords" class="com.fcw.action.admin.HotWordsAction">
+			<result name="list">/admin/hotwords/list.jsp</result>
+			<result name="edit">/admin/hotwords/edit.jsp</result>
+		</action>
+		<action name="reward" class="com.fcw.action.admin.RewardAction">
+			<result name="list">/admin/reward/list.jsp</result>
+			<result name="edit">/admin/reward/edit.jsp</result>
+		</action>
+		<action name="comment" class="com.fcw.action.admin.CommentAction">
+			<result name="list">/admin/comment/list.jsp</result>
+			<result name="edit">/admin/comment/edit.jsp</result>
+		</action>
+
+		<action name="blogInfo" class="com.fcw.action.admin.BlogInfoAction">
+			<result name="list">/admin/bloginfo/list.jsp</result>
+			<result name="edit">/admin/bloginfo/edit.jsp</result>
+		</action>
+		<action name="article" class="com.fcw.action.admin.ArticleAction">
+			<result name="list">/admin/article/list.jsp</result>
+			<result name="edit">/admin/article/edit.jsp</result>
+		</action>
+		<action name="artCatalog" class="com.fcw.action.admin.ArtCatalogAction">
+			<result name="list">/admin/artcatalog/list.jsp</result>
+			<result name="edit">/admin/artcatalog/edit.jsp</result>
+		</action>
+		<action name="record" class="com.fcw.action.admin.RecordAction">
+			<result name="list">/admin/record/list.jsp</result>
+			<result name="edit">/admin/record/edit.jsp</result>
+		</action>
+		<action name="friend" class="com.fcw.action.admin.FriendAction">
+			<result name="list">/admin/friend/list.jsp</result>
+			<result name="edit">/admin/friend/edit.jsp</result>
+		</action>
+		<action name="blogVisit" class="com.fcw.action.admin.BlogVisitAction">
+			<result name="list">/admin/blogvisit/list.jsp</result>
+			<result name="edit">/admin/blogvisit/edit.jsp</result>
+		</action>
+		<action name="blogGuest" class="com.fcw.action.admin.BlogGuestAction">
+			<result name="list">/admin/blogguest/list.jsp</result>
+			<result name="edit">/admin/blogguest/edit.jsp</result>
+		</action>
+		<action name="message" class="com.fcw.action.admin.MessageAction">
+			<result name="list">/admin/message/list.jsp</result>
+			<result name="edit">/admin/message/edit.jsp</result>
+		</action>
+		<action name="cache" class="com.fcw.action.admin.CacheAction">
+			<result name="result">/admin/cache/cache.jsp</result>
+		</action>
+		<action name="blogComment" class="com.fcw.action.admin.BlogCommentAction">
+			<result name="list">/admin/blogcomment/list.jsp</result>
+			<result name="edit">/admin/blogcomment/edit.jsp</result>
+		</action>
+	</package>
+</struts>

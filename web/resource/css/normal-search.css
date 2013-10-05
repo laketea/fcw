@@ -1,0 +1,30 @@
+#normal-search .sidebar{border: 1px solid #A4C0CE;}
+#normal-search .sidebar .title{height: 33px;background-image: url("../img/left-side-title.png");}
+#normal-search .sidebar {display: inline;}
+#normal-search .sidebar .side-content{width: 100%;margin-top: 10px;}
+#normal-search .sidebar .side-content ul{padding: 0 10px 20px;}
+#normal-search .sidebar .side-content ul li{margin-bottom: 10px;padding-bottom: 6px;border-bottom: 1px solid #e6e6e6;}
+#normal-search .sidebar .side-content ul li div a{line-height: 21px;margin-right: 4px;color: #016a9f;}
+.li-title{
+color: #000000;
+    font-size: 14px;
+    height: 17px;
+    line-height: 16px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+#normal-search .content{border: 1px solid #DADADA;}
+#search-title{height: 31px;line-height:31px;background-image: url("../img/search-bg.png");border-bottom: 1px solid  #DADADA;}
+#search-title h2{padding-left: 10px;font-size: 14px;}
+#search-result ul{margin-left: 10px;margin-right: 10px;margin-top: 10px;list-style: none;}
+#search-result ul li{float: left;position:relative;border-bottom: 1px dotted #B9B9B9;height: 82px;margin-bottom: 20px;display: block;width: 100%;}
+#search-result ul li p{float: left;display: block;width: 590px;height: 22px;line-height: 22px;}
+.company-img{width: 70px;height: 70px;background: #fdfdff;border: 1px solid #dadada;margin-right: 10px;}
+#search-result ul li p.company-name{height: 26px;color: blue;font-size: 14px;font-weight: bold;}
+.company-phone{
+    position: absolute;
+    right: 60px;
+    top: 0px;
+    color: #4169e1;
+}

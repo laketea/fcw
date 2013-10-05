@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Spring配置文件的Schema信息 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- 配置DAO组件的模板 -->
+	<bean id="daoTemplate" abstract="true" lazy-init="true"
+		p:sessionFactory-ref="sessionFactory" />
+
+	<bean id="adminDao" class="com.fcw.dao.impl.AdminDaoHibernate"
+		parent="daoTemplate" />
+	<bean id="newsDao" class="com.fcw.dao.impl.NewsDaoHibernate" parent="daoTemplate"/>
+	<bean id="newsChannelDao" class="com.fcw.dao.impl.NewsChannelDaoHibernate" parent="daoTemplate"/>
+	<bean id="usersDao" class="com.fcw.dao.impl.UsersDaoHibernate" parent="daoTemplate"/>
+	<bean id="userInfoDao" class="com.fcw.dao.impl.UserInfoDaoHibernate" parent="daoTemplate"/>
+	<bean id="resourceChannelDao" class="com.fcw.dao.impl.ResourceChannelDaoHibernate" parent="daoTemplate"/>
+	<bean id="resourceDao" class="com.fcw.dao.impl.ResourceDaoHibernate" parent="daoTemplate"/>
+	<bean id="resourceVisitDao" class="com.fcw.dao.impl.ResourceVisitDaoHibernate" parent="daoTemplate"/>
+	<bean id="tenderDao" class="com.fcw.dao.impl.TenderDaoHibernate" parent="daoTemplate"/>
+	<bean id="tenderGuestDao" class="com.fcw.dao.impl.TenderGuestDaoHibernate" parent="daoTemplate"/>
+	<bean id="inforChannelDao" class="com.fcw.dao.impl.InforChannelDaoHibernate" parent="daoTemplate"/>
+	<bean id="informationDao" class="com.fcw.dao.impl.InformationDaoHibernate" parent="daoTemplate"/>
+	<bean id="downLoadDao" class="com.fcw.dao.impl.DownLoadDaoHibernate" parent="daoTemplate"/>
+	<bean id="mutliSiteDao" class="com.fcw.dao.impl.MutliSiteDaoHibernate" parent="daoTemplate"/>
+	<bean id="slideDao" class="com.fcw.dao.impl.SlideDaoHibernate" parent="daoTemplate"/>
+	<bean id="advDao" class="com.fcw.dao.impl.AdvDaoHibernate" parent="daoTemplate"/>
+	<bean id="hotWordsDao" class="com.fcw.dao.impl.HotWordsDaoHibernate" parent="daoTemplate"/>
+	<bean id="rewardDao" class="com.fcw.dao.impl.RewardDaoHibernate" parent="daoTemplate"/>
+	<bean id="rewardReplyDao" class="com.fcw.dao.impl.RewardReplyDaoHibernate" parent="daoTemplate"/>
+	<bean id="commentDao" class="com.fcw.dao.impl.CommentDaoHibernate" parent="daoTemplate"/>
+	<bean id="blogInfoDao" class="com.fcw.dao.impl.BlogInfoDaoHibernate" parent="daoTemplate"/>
+	<bean id="articleDao" class="com.fcw.dao.impl.ArticleDaoHibernate" parent="daoTemplate"/>
+	<bean id="artCatalogDao" class="com.fcw.dao.impl.ArtCatalogDaoHibernate" parent="daoTemplate"/>
+	<bean id="recordDao" class="com.fcw.dao.impl.RecordDaoHibernate" parent="daoTemplate"/>
+	<bean id="friendDao" class="com.fcw.dao.impl.FriendDaoHibernate" parent="daoTemplate"/>
+	<bean id="blogVisitDao" class="com.fcw.dao.impl.BlogVisitDaoHibernate" parent="daoTemplate"/>
+	<bean id="blogGuestDao" class="com.fcw.dao.impl.BlogGuestDaoHibernate" parent="daoTemplate"/>
+	<bean id="messageDao" class="com.fcw.dao.impl.MessageDaoHibernate" parent="daoTemplate"/>
+	<bean id="blogCommentDao" class="com.fcw.dao.impl.BlogCommentDaoHibernate" parent="daoTemplate"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+</beans>

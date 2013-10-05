@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.fcw.domain">
+	<class	name="UserInfo"	table="UserInfo_table">
+		<!-- 使用只读缓存 -->
+		
+		<!-- 映射标识属性 -->
+		<id	name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		
+		<!-- 映射普通属性 -->
+		<property name="companyId" column="companyId" type="integer" length="50"/>
+		<property name="companyName" column="companyName" type="string" length="50"/>
+		<property name="realName" column="realName" type="string" length="50"/>
+		<property name="male" column="male" type="integer" length="50"/>
+		<property name="age" column="age" type="string" length="50"/>
+		<property name="phone" column="phone" type="string" length="50"/>
+		<property name="lastUpdateTime" column="lastUpdateTime" type="string" length="50"/>
+		<property name="score" column="score" type="integer" length="50"/>
+		<property name="status" column="status" type="integer" length="50"/>
+		<many-to-one name="users" column="userId" unique="true" />
+	</class>
+</hibernate-mapping>

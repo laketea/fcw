@@ -1,0 +1,342 @@
+.border_t {
+	BORDER-TOP: #dddddd 1px solid
+}
+.right {
+	WIDTH: 250px; FLOAT: right; HEIGHT: auto
+}
+.fldh {
+	BORDER-BOTTOM: #cfcfcf 1px solid; BORDER-LEFT: #cfcfcf 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #fffcef; HEIGHT: auto; BORDER-TOP: #cfcfcf 1px solid; BORDER-RIGHT: #cfcfcf 1px solid; PADDING-TOP: 1px
+}
+.fldh_title {
+	LINE-HEIGHT: 30px; PADDING-LEFT: 12px; BACKGROUND: url(../img/fl_bg.gif) repeat-x; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.fldh_content {
+	PADDING-BOTTOM: 11px; PADDING-LEFT: 12px; PADDING-RIGHT: 0px; HEIGHT: auto; PADDING-TOP: 15px
+}
+.fldh_content H4 {
+	PADDING-BOTTOM: 9px; COLOR: #e56a02; FONT-SIZE: 12px
+}
+.fldh_content H4 A {
+	COLOR: #e56a02; FONT-SIZE: 12px
+}
+.fldh_content UL LI {
+	LINE-HEIGHT: 21px; WIDTH: 110px; FLOAT: left
+}
+.left {
+	WIDTH: 690px; FLOAT: left; HEIGHT: auto
+}
+.fldh2 {
+	BORDER-BOTTOM: #cfcfcf 1px solid; BORDER-LEFT: #cfcfcf 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; HEIGHT: auto; BORDER-TOP: #cfcfcf 1px solid; BORDER-RIGHT: #cfcfcf 1px solid; PADDING-TOP: 1px
+}
+.fldh2_title {
+	LINE-HEIGHT: 30px; PADDING-LEFT: 12px; BACKGROUND: url(../img/xz_bg.gif) repeat-x; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.fldh2_con {
+	PADDING-BOTTOM: 9px; PADDING-LEFT: 9px; PADDING-RIGHT: 0px; HEIGHT: auto; PADDING-TOP: 8px
+}
+.fldh2_con LI {
+	LINE-HEIGHT: 22px; HEIGHT: 22px; OVERFLOW: hidden
+}
+.s02 {
+	WIDTH: 20px; FLOAT: right; HEIGHT: 27px; COLOR: #730000; FONT-SIZE: 12px; CURSOR: pointer; FONT-WEIGHT: normal; PADDING-TOP: 3px
+}
+.s01 {
+	WIDTH: 20px; FLOAT: right; HEIGHT: 27px; COLOR: #fff; FONT-SIZE: 12px; CURSOR: pointer; FONT-WEIGHT: bold; PADDING-TOP: 2px
+}
+.fldh2_title2 {
+	TEXT-ALIGN: left; LINE-HEIGHT: 30px; PADDING-LEFT: 12px; BACKGROUND: url(../img/xz_bg.gif) repeat-x; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.h_con {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 25px; PADDING-LEFT: 22px; PADDING-RIGHT: 0px; BACKGROUND: url(../img/num.gif) no-repeat 0px 9px; PADDING-TOP: 4px
+}
+.h_con LI {
+	HEIGHT: 25px; OVERFLOW: hidden
+}
+.intro {
+	BORDER-BOTTOM: #e3e3e3 1px solid; BORDER-LEFT: #e3e3e3 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 7px; PADDING-RIGHT: 0px; BACKGROUND: #faf2f2; HEIGHT: 23px; BORDER-TOP: #e3e3e3 1px solid; BORDER-RIGHT: #e3e3e3 1px solid; PADDING-TOP: 2px
+}
+.or {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 14px; PADDING-RIGHT: 15px; BACKGROUND: url(../img/comment_bg.gif) no-repeat 0px 0px; COLOR: #fff; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.wd {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 19px; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; PADDING-TOP: 0px
+}
+.zkai {
+	PADDING-BOTTOM: 7px; FLOAT: right; PADDING-TOP: 5px
+}
+.list2 LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; PADDING-LEFT: 15px; WIDTH: 140px; PADDING-RIGHT: 10px; FLOAT: left; PADDING-TOP: 4px
+}
+.list2 IMG {
+	MARGIN-BOTTOM: 7px
+}
+.list2 SPAN {
+	COLOR: #ff0000; FONT-WEIGHT: bold
+}
+.list2 A {
+	COLOR: #666
+}
+.list2 A:hover {
+	COLOR: #0c9a00
+}
+.intro LI {
+	PADDING-RIGHT: 2px; FLOAT: left
+}
+.sd01 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 22px; WIDTH: 78px; BACKGROUND: url(../img/comment_bg.gif) no-repeat 0px 0px; HEIGHT: 22px; COLOR: #fff; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.sd02 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 22px; WIDTH: 78px; HEIGHT: 22px; CURSOR: pointer; FONT-WEIGHT: bold
+}
+.indication {
+	PADDING-BOTTOM: 12px; PADDING-LEFT: 15px; PADDING-RIGHT: 0px; HEIGHT: auto; PADDING-TOP: 8px
+}
+.indication2 {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 12px; PADDING-RIGHT: 0px; HEIGHT: auto; PADDING-TOP: 3px
+}
+.list3 {
+	LINE-HEIGHT: 28px
+}
+.list3 LI {
+	WIDTH: 330px; FLOAT: left; HEIGHT: 28px; OVERFLOW: hidden
+}
+.list3 LI A {
+	COLOR: #666
+}
+.download {
+	BORDER-BOTTOM: #e3e3e3 1px solid; BORDER-LEFT: #e3e3e3 1px solid; BORDER-TOP: #e3e3e3 1px solid; BORDER-RIGHT: #e3e3e3 1px solid
+}
+.down {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; WIDTH: 203px; PADDING-RIGHT: 6px; FLOAT: left; BORDER-RIGHT: #e3e3e3 1px solid; PADDING-TOP: 6px
+}
+.down IMG {
+	MARGIN-BOTTOM: 6px
+}
+.downpic {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 55px; WIDTH: 148px; PADDING-RIGHT: 0px; DISPLAY: block; MARGIN-BOTTOM: 6px; BACKGROUND: url(../img/download.gif) no-repeat; HEIGHT: 21px; COLOR: #fff; PADDING-TOP: 38px
+}
+.downpic EM {
+	COLOR: #fdff5b
+}
+.down A {
+	COLOR: #fff
+}
+.down A:hover {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.busi {
+	WIDTH: 472px; FLOAT: left
+}
+.link {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 4px; PADDING-RIGHT: 0px; BACKGROUND: #faf2f2; COLOR: #666666; PADDING-TOP: 4px
+}
+.busi IMG {
+	MARGIN-BOTTOM: 6px; MARGIN-LEFT: 6px
+}
+.comment {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 12px; PADDING-RIGHT: 12px; PADDING-TOP: 0px
+}
+.pf {
+	WIDTH: auto
+}
+.pf LI {
+	TEXT-ALIGN: left; LINE-HEIGHT: 22px; WIDTH: auto; PADDING-RIGHT: 11px; FLOAT: left
+}
+.input {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 100%; BACKGROUND: #fff; CLEAR: both; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid
+}
+.com_wd {
+	BORDER-BOTTOM: #e0e0e0 1px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 21px; HEIGHT: auto
+}
+.p_le {
+	FLOAT: left
+}
+.p_ri {
+	PADDING-RIGHT: 10px; FLOAT: right
+}
+.blue {
+	PADDING-RIGHT: 12px; COLOR: #3366cc
+}
+.orange {
+	COLOR: #e27135
+}
+.black {
+	COLOR: #404040
+}
+.red {
+	COLOR: #ff0000
+}
+.com_num {
+	FLOAT: right
+}
+.com_num A {
+	COLOR: #03c
+}
+.title {
+	PADDING-BOTTOM: 5px; FONT-FAMILY: "΢���ź�"; COLOR: #004584; FONT-SIZE: 18px; FONT-WEIGHT: normal; PADDING-TOP: 4px
+}
+.title A {
+	PADDING-LEFT: 15px; FONT-FAMILY: "����"; COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.info {
+	PADDING-LEFT: 15px
+}
+.protect {
+	WIDTH: 139px; FLOAT: left; HEIGHT: 57px
+}
+.pingf {
+	WIDTH: 190px; BACKGROUND: url(../img/pingf_bg.gif) no-repeat; FLOAT: left; HEIGHT: 57px
+}
+.info_l {
+	WIDTH: 329px; FLOAT: left
+}
+.info_r {
+	FLOAT: right; PADDING-TOP: 2px
+}
+.fenshu {
+	PADDING-BOTTOM: 7px; LINE-HEIGHT: 20px; PADDING-LEFT: 4px; PADDING-RIGHT: 0px; HEIGHT: 20px; COLOR: #000; PADDING-TOP: 5px
+}
+.redwei {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 4px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ff0000; FONT-SIZE: 20px; PADDING-TOP: 0px
+}
+.fenshu IMG {
+	MARGIN: 0px 2px
+}
+.come_pf {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 12px; PADDING-RIGHT: 0px; COLOR: #000; PADDING-TOP: 0px
+}
+.blue2 {
+	COLOR: #1651b2
+}
+.pic {
+	FLOAT: left
+}
+.pl {
+	LINE-HEIGHT: 19px; PADDING-RIGHT: 20px; FLOAT: right; COLOR: #000
+}
+.infowd {
+	LINE-HEIGHT: 26px; COLOR: #404040
+}
+.doc {
+	BACKGROUND: url(../img/doc.gif) no-repeat 63px 0px
+}
+.redwei2 {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 4px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ff0000; FONT-SIZE: 20px; PADDING-TOP: 0px
+}
+.black2 {
+	COLOR: #000
+}
+.xuebi A {
+	COLOR: #fe4800
+}
+.hy {
+	PADDING-TOP: 5px
+}
+.hypic {
+	WIDTH: 57px; FLOAT: left
+}
+.hypic IMG {
+	BORDER-BOTTOM: #e1e1e1 1px solid; BORDER-LEFT: #e1e1e1 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BORDER-TOP: #e1e1e1 1px solid; BORDER-RIGHT: #e1e1e1 1px solid; PADDING-TOP: 2px
+}
+.hyinfo {
+	LINE-HEIGHT: 18px
+}
+.hya A {
+	COLOR: #3366cc; FONT-WEIGHT: bold
+}
+.hya2 A {
+	COLOR: #36c
+}
+.gnq {
+	BORDER-BOTTOM: #dbdbdb 1px solid; BORDER-LEFT: #dbdbdb 1px solid; BACKGROUND: #f4f4f4; COLOR: #626262; BORDER-TOP: #dbdbdb 1px solid; BORDER-RIGHT: #dbdbdb 1px solid
+}
+.gnq A:hover {
+	COLOR: #626262; TEXT-DECORATION: none
+}
+.zan {
+	FLOAT: left; BORDER-RIGHT: #dbdbdb 1px solid
+}
+.shou {
+	FLOAT: left; BORDER-RIGHT: #dbdbdb 1px solid
+}
+.tou {
+	FLOAT: left; BORDER-RIGHT: #dbdbdb 1px solid
+}
+.zan A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 15px; PADDING-LEFT: 67px; WIDTH: 63px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../img/zan.gif); HEIGHT: 39px; PADDING-TOP: 13px
+}
+.zan A:hover {
+	BACKGROUND: url(../img/zanhover.gif)
+}
+.guan {
+	FLOAT: left; BORDER-RIGHT: #dbdbdb 1px solid
+}
+.guan A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 15px; PADDING-LEFT: 66px; WIDTH: 62px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../img/guan.gif); HEIGHT: 39px; PADDING-TOP: 13px
+}
+.guan A:hover {
+	BACKGROUND: url(../img/guanhover.gif)
+}
+.shou A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 15px; PADDING-LEFT: 67px; WIDTH: 63px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../img/shou.gif); HEIGHT: 39px; PADDING-TOP: 13px
+}
+.shou A:hover {
+	BACKGROUND: url(../img/shouhover.gif)
+}
+.tou A {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 13px; PADDING-LEFT: 67px; WIDTH: 63px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(../img/tou.gif); HEIGHT: 39px; PADDING-TOP: 13px
+}
+.tou A:hover {
+	BACKGROUND: url(../img/touhover.gif)
+}
+.share IMG {
+	MARGIN: 16px 0px 0px 20px
+}
+.or2 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 14px; PADDING-RIGHT: 15px; BACKGROUND: url(../img/comment_bg.gif) no-repeat 0px 0px; FLOAT: left; COLOR: #fff; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.ry {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 6px; FLOAT: right; PADDING-TOP: 3px
+}
+.ry IMG {
+	MARGIN-LEFT: 3px
+}
+.jb {
+	LINE-HEIGHT: 27px; PADDING-LEFT: 10px
+}
+.jb LI {
+	HEIGHT: 27px; OVERFLOW: hidden
+}
+.jb .one {
+	PADDING-LEFT: 23px; WIDTH: 310px; BACKGROUND: url(../img/jinpai.png) no-repeat 0px 4px; FLOAT: left
+}
+.jb .two {
+	PADDING-LEFT: 23px; WIDTH: 310px; BACKGROUND: url(../img/two.gif) no-repeat 0px 4px; FLOAT: left
+}
+.jb .three {
+	PADDING-LEFT: 23px; WIDTH: 310px; BACKGROUND: url(../img/three.gif) no-repeat 0px 4px; FLOAT: left
+}
+.jb LI A {
+	COLOR: #666
+}
+.tableurser {
+	BORDER-BOTTOM: #d4deb4 1px solid; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.tableurser TD {
+	BORDER-BOTTOM: #d4deb4 1px solid; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.aligncenter {
+	TEXT-ALIGN: center; LINE-HEIGHT: 28px
+}
+.tableurser2 {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.tableurser2 TD {
+	BORDER-BOTTOM: #ddd 1px dashed; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.aligncenter2 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 28px
+}
+.classListTitle TD {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; LINE-HEIGHT: 28px; BACKGROUND: url(../img/title1.gif) repeat-x; HEIGHT: 28px; COLOR: black; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}

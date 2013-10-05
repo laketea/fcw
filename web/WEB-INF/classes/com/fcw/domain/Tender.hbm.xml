@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.fcw.domain">
+	<class	name="Tender"	table="Tender_table">
+		<!-- 使用只读缓存 -->
+		
+		<!-- 映射标识属性 -->
+		<id	name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		
+		<!-- 映射普通属性 -->
+		<property name="authorId" column="authorId" type="integer" length="50"/>
+		<property name="authorName" column="authorName" type="string" length="50"/>
+		<property name="tenderNum" column="tenderNum" type="string" length="50"/>
+		<property name="name" column="name" type="string" length="50"/>
+		<property name="company" column="company" type="string" length="50"/>
+		<property name="tenderType" column="tenderType" type="string" length="50"/>
+		<property name="contact" column="contact" type="string" length="50"/>
+		<property name="phone" column="phone" type="string" length="50"/>
+		<property name="pbTime" column="pbTime" type="string" length="50"/>
+		<property name="content" column="content" type="string" length="50"/>
+		<property name="dffDate" column="dffDate" type="string" length="50"/>
+		<property name="endTime" column="endTime" type="string" length="50"/>
+		<property name="viewCount" column="viewCount" type="integer" length="50"/>
+		<property name="winnerId" column="winnerId" type="integer" length="50"/>
+		<property name="winnerName" column="winnerName" type="string" length="50"/>
+		<property name="dfRecmd" column="dfRecmd" type="integer" length="50"/>
+		<property name="dfSortNum" column="dfSortNum" type="integer" length="50"/>
+		<property name="vip" column="vip" type="integer" length="50"/>
+		<property name="status" column="status" type="integer" length="50"/>
+		<property name="overdue" column="overdue" type="integer" length="50"/>
+		
+
+	</class>
+</hibernate-mapping>

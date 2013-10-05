@@ -1,0 +1,61 @@
+.banner{border: 1px solid #ccccc6;height: 231px;background: url("../img/swhz-banner.png");margin-bottom: 10px;}
+#swhz .content{width: 710px;border: 1px solid #ccccc6;}
+#swhz .content .title{height: 35px;border-bottom: 1px solid #ccccc6;background: url("../img/swfz-title.png");}
+#swhz .content .title span{margin-left: 10px;font-size: 14px;font-weight: bold;line-height: 35px;}
+#swhz .content ul{padding: 15px;}
+#swhz .content ul li{margin-bottom: 10px;border-bottom: 1px dashed #ccccc6;padding-bottom: 10px;}
+#tb_list li .box a.tb_name{ display: block;height: 25px;line-height: 25px;font-size: 14px;font-weight: bold;color: #004499;}
+#tb_list li .box a.overdue{color: #666666;}
+#tb_list li .box a.tb_btn{color: #004499;}
+#tb_list li .box a.tb-view{display: block;float: right;height: 25px;line-height:25px;color: #004499;}
+#tb_list li .box span{display: block;float: left;height: 25px;line-height:25px;margin-right:20px;color: #666666;}
+.business-adv{width: 710px;height: 231px;background: #fff;}
+.tb-view{color: #004499;}
+#swhz .sidebar{width: 232px;border: 1px solid #ccccc6;}
+#zb-list h2{height: 37px;line-height: 37px;text-align: center;font-size: 14px;font-weight: bold;}
+#zb-list .zb-bg{height: 8px;background-image: url("../img/zb_bg.png");}
+#zb-list ul{padding: 5px 15px 10px;}
+#zb-list ul li{margin-bottom: 5px;}
+#zb-list ul li h3{height: 25px;line-height: 25px;font-size: 12px;color: #004499;}
+#zb-list ul li span{height: 15px;line-height: 15px;font-size: 12px;}
+
+#zb-content{padding: 10px 20px 30px;}
+#err-content h3{font-weight: bold;color: #004499;height: 35px;line-height: 35px;font-size: 12px;border-bottom: 1px dashed  #ccccc6;margin-bottom: 5px;}
+#err-content{padding: 10px 20px 30px;}
+#zb-content h3{font-weight: bold;color: #004499;height: 35px;line-height: 35px;font-size: 12px;border-bottom: 1px dashed  #ccccc6;margin-bottom: 5px;}
+#zb-content a{float: right;color: #333333;}
+#zb-content .detail-info{margin-bottom: 20px;}
+#zb-content .detail-info span{display: block;float: left;width: 50%;height: 25px;line-height: 25px;}
+.zb-des{line-height: 2;margin-bottom: 20px;}
+
+label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0;  }
+		.ui-dialog .ui-state-error { padding: .3em; }
+#dialog-form{
+	border-radius:0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 0;
+}
+.sw-login{
+    position: absolute;
+    right:28px;
+    top:108px;
+    width: 73px;
+    height: 45px;
+    background: url("../img/tm2.png");
+    cursor: pointer;
+}
+.sw-reg{
+    position: absolute;
+    right:115px;
+    top:108px;
+    width: 100px;
+    height: 45px;
+    background: url("../img/tm2.png");
+    cursor: pointer;
+}
+.banner{
+    position: relative;
+}

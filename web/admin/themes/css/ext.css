@@ -1,0 +1,13 @@
+p.editor-p {
+	width:100%;
+}
+.pageFormContent label {
+    float: left;
+    line-height: 21px;
+    padding: 0 5px;
+    text-align: right;
+    width: 100px;
+}
+#add-resource{
+	width:800px;
+}

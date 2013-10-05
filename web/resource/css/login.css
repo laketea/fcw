@@ -1,0 +1,126 @@
+#login-main{
+    height: 550px;
+    position: relative;
+}
+#login-main .logo{
+    position: absolute;
+    left:12px;
+    top: 30px;
+    width: 173px;
+    height: 74px;
+    background: url("../img/login-logo.png");
+}
+#login-main .des{
+    position: absolute;
+    left:0;
+    top: 110px;
+    width: 463px;
+    height: 363px;
+    background: url("../img/logo-left.png");
+}
+#login-main .content{
+    position: absolute;
+    left:463px;
+    top: 86px;
+    width: 497px;
+    height: 411px;
+    background: #beeafc;
+    border-radius:5px;
+}
+#login-main .content .ct {
+    position: absolute;
+    left:10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #FFF;
+}
+
+.h41 {
+    clear: both;
+    height: 41px;
+    overflow: hidden;
+}
+
+.right_m_login {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 351px;
+}
+.login_icon {
+    color: #297DC5;
+    font-family: "微软雅黑";
+    font-size: 18px;
+}
+
+.login_icon_i {
+    background: url("../img/renb.jpg") no-repeat scroll left center transparent;
+    padding-left: 28px;
+}
+
+.right_m_login dl {
+    height: 33px;
+    padding-top: 17px;
+}
+.right_m_login dd {
+    color: #000000;
+    float: left;
+    font-size: 14px;
+    height: 33px;
+    line-height: 33px;
+    width: 59px;
+}
+
+.right_m_login dt {
+    float: left;
+    height: 33px;
+    width: 292px;
+}
+
+.login_y {
+    height: 33px;
+    padding: 17px 0;
+}
+
+.yan_f {
+    color: #000000;
+    font-size: 14px;
+    height: 33px;
+    line-height: 33px;
+    width: 59px;
+}
+
+.yan_input {
+    height: 33px;
+    width: 108px;
+}
+
+.yan_font {
+    height: 34px;
+    padding-left: 10px;
+    width: 65px;
+}
+
+.yan_l {
+    color: #333333;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding-left: 59px;
+}
+
+.login_btn {
+    height: 35px;
+    padding: 19px 0 19px 59px;
+}
+
+.login_font {
+    font-size: 14px;
+    padding-left: 29px;
+}
+
+.login_font a {
+    color: #297DC5;
+    font-weight: bold;
+    text-decoration: underline;
+}

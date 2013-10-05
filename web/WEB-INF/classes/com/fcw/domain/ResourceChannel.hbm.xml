@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.fcw.domain">
+	<class name="ResourceChannel" table="ResourceChannel_table">
+		<!-- 使用只读缓存 -->
+
+		<!-- 映射标识属性 -->
+		<id name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity" />
+		</id>
+
+		<!-- 映射普通属性 -->
+		<property name="name" column="name" type="string" length="50" />
+		<property name="channelCount" column="channelCount" type="integer"
+			length="50" />
+		<property name="sortNum" column="sortNum" type="integer"
+			length="50" />
+		<property name="dhstatus" column="dhstatus" type="integer"
+			length="50" />
+		<property name="dfstatus" column="dfstatus" type="integer"
+			length="50" />
+		<property name="createTime" column="createTime" type="string"
+			length="50" />
+		<property name="status" column="status" type="integer"
+			length="50" />
+		<property name="dfTitle" column="dfTitle" type="string"
+			length="50" />
+		<property name="dfTitleUrl" column="dfTitleUrl" type="string"
+			length="50" />
+		<property name="dfFirstLine" column="dfFirstLine" type="string"
+			length="50" />
+		<property name="dfFirstLineUrl" column="dfFirstLineUrl" type="string"
+			length="50" />
+		<property name="dfSecondLine" column="dfSecondLine" type="string"
+			length="50" />
+		<property name="dfSecondLineUrl" column="dfSecondLineUrl" type="string"
+			length="50" />
+		<property name="dfPhoto" column="dfPhoto" type="string"
+			length="50" />
+		<property name="dfPhotoUrl" column="dfPhotoUrl" type="string"
+			length="50" />
+		<many-to-one name="parentChannel" class="ResourceChannel"
+			fetch="select">
+			<column name="parentId" />
+		</many-to-one>
+		<!-- 自身一对多 实现无限制多级分类 -->
+		<bag name="childChannels" cascade="save-update" inverse="true"
+			order-by="id" lazy="false">
+			<key column="parentId" />
+			<one-to-many class="ResourceChannel" />
+		</bag>
+		<!-- 跟资源的一对多 -->
+		<bag name="resources" cascade="save-update" inverse="true"
+			order-by="id">
+			<key column="channelId" />
+			<one-to-many class="Resource" />
+		</bag>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,189 @@
+#reg-head{height: 70px;position: relative;}
+#reg-head .logo{position: absolute;top:0;left:0;width: 181px;height: 91px;background-image: url("../img/reg-logo.png");background-repeat: no-repeat;}
+#reg-head a{position: absolute;top:10px;right:10px;color: #7E7E7E;HEIGHT: 20px;line-height: 20px;display: block;}
+#reg-head span{position: absolute;bottom:10px;right:10px;color: #999;HEIGHT: 20px;line-height: 20px;display: block;}
+#reg-main{ background:#F3F3F3;padding: 5px 0;}
+#main-contain{background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #D4D4D4;MARGIN: 0 5px;font: 12px Arial,sans-serif;}
+#main-contain .sub {background: url("../img/reg-btn.gif") repeat scroll 0 -191px #FFFFFF;height: 49px;
+}
+#content {
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+.l_m {
+    float: left;
+    width: 600px;
+}
+.n_form {
+    display: inline-block;
+    line-height: 25px;
+}
+.noticew {
+    background: none repeat scroll 0 0 #FFFEEE;
+    border: 1px solid #FCDFA9;
+    display: inline-block;
+    padding: 5px 8px 8px;
+    color: #333333;
+
+}
+.ml10 {
+    margin-left: 10px;
+}
+
+.s_icon {
+    background: url("http://i2.sinaimg.cn/hs/dichan/2011/mixr.gif") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+    width: 18px;
+}
+.i_notice {
+    background-position: -40px -379px;
+}
+#container a {
+    color: #003593;
+}
+.n_form .f_sub {
+    display: inline-block;
+    height: 100%;
+    line-height: 22px;
+    text-align: right;
+    vertical-align: top;
+    width: 130px;
+}
+.n_form input.tx {
+    border: 1px solid #C6C6C6;
+    height: 16px;
+    line-height: 16px;
+    padding: 4px;
+}
+.n_form input {
+    vertical-align: middle;
+}
+.ipt150 {
+    width: 148px;
+}
+.n_form .tip {
+    margin-left: 130px;
+}
+.c_fgray {
+    color: #B7B7B7;
+}
+.sub h6 {
+    background: url("http://i1.sinaimg.cn/hs/dichan/2011/btn.gif") no-repeat scroll 0 -111px transparent;
+    height: 49px;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 15px;
+}
+.sub span {
+    font-family: "Microsoft YaHei",verdana;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 45px;
+}
+.n_form li {
+    margin: 0 0 10px;
+}
+.n_form .f_sub em {
+    color: #FF6600;
+    display: inline-block;
+    font: 12px simsun;
+    margin: 0;
+    padding-right: 5px;
+    width: 5px;
+}
+.c_gray {
+    color: #999999;
+}
+.n_form .b_submit {
+    background: url("http://i1.sinaimg.cn/hs/dichan/2011/btn.gif") repeat scroll 100% 0 transparent;
+    display: inline-block;
+    padding: 0 3px 0 0;
+    text-align: center;
+}
+.n_form .b_submit button {
+    background: url("http://i1.sinaimg.cn/hs/dichan/2011/btn.gif") repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: 800 14px/30px Verdana;
+    height: 30px;
+    overflow: visible;
+    padding: 0 10px 3px 15px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.mr10 {
+    margin-right: 10px;
+}
+#content a {
+    color: #003593;
+}
+.r_m {
+    border-left: 1px solid #E1E1E1;
+    float: right;
+    height: 370px;
+    margin-top: 15px;
+    padding-left: 30px;
+    width: 300px;
+}
+.r_m h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.dot_list li {
+    background: url("http://i1.sinaimg.cn/hs/dichan/2011/mixr.gif") no-repeat scroll -143px -263px transparent;
+    line-height: 24px;
+    text-indent: 13px;
+}
+.c_red {
+    color: #FF6600;
+}
+em, cite, th, small {
+    font-style: normal;
+    font-weight: 400;
+}
+#footer {
+    border-top: 1px solid #E6E6E6;
+    color: #7E7E7E;
+
+    margin: 20px 0 0;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    font: 12px Arial,sans-serif;
+    line-height: 24px;
+}
+#footer a {
+    margin: 0 7px;
+}
+.n_form select{
+	border: 1px solid #C6C6C6;
+    height: 25px;
+    line-height: 25px;
+    width: 100px;
+ 
+}
+.ipt100{
+	width:100px
+}
+.ipt80{
+	width:80px
+}
+.ipt60{
+	width:60px
+}
+.iptcpName{
+	margin-left:5px;
+}
+select.sltCompany{
+	width:150px;
+}
+.err_msg{
+	height:16px;
+	line-height:16px;
+	color:red;
+	margin-left:15px
+}

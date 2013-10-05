@@ -1,0 +1,200 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.fl{
+    float: left;
+}
+.w300{
+    width: 300px;
+}
+.w650{
+    width: 650px;
+}
+.w691{
+    width: 691px;
+}
+.ml709{
+    margin-left: 709px;
+}
+.w250{
+    width: 250px;
+}
+.h230{
+    height: 230px;
+}
+.h198{
+    height: 198px;
+}
+.fr{
+    float: right;
+}
+
+.box:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+li.font-red a{
+    color: red;
+}
+.dbr{
+    border-bottom: 1px solid #89C3E6;
+    border-left: 1px solid #89C3E6;
+    border-right: 1px solid #89C3E6;
+}
+.mt10{
+    margin-top: 10px;
+}
+li a.red{
+    color: red;
+}
+
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+.w224{
+    width: 224px;
+}
+.w720{
+    width: 720px;
+}
+
+#tp-search{
+    width: 600px;
+    height: 120px;
+    margin-top:28px
+
+}
+#search-main{
+    width: 516px;
+    height: 36px;
+    background: #FF6600;
+    position: relative;
+    border-radius:0px 2px 2px 2px
+}
+#search-ipt{
+    border:none;
+    width: 407px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border: 1px solid #ff6600;
+    border-right: none;
+    margin-left: 2px;
+    margin-top: 2px;
+    padding-left: 3px;
+    float: left;
+}
+#tp-search-btn{
+    margin-top: 2px;
+    height: 32px;
+}
+#search-tab{
+    position: absolute;
+    left: 0px;
+    top: -23px;
+    width: 220px;
+    height: 25px;
+
+}
+#search-tab ul{
+    padding: 0;
+    margin:0;
+    height: 25px;
+    width: 220px;
+    list-style: none;
+}
+#search-tab ul li{
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+/* #search-tab ul li:hover{
+    border-radius:2px 2px 0 0;
+    background: #ff6600;
+    color: white;
+} */
+.curTab{
+    border-radius:2px 2px 0 0;
+    background: #ff6600;
+    color: white;
+}
+#holt-world{
+	height:25px;
+	margin-top:2px;
+	margin-left:2px;
+	width:450px;
+	line-height:25px;
+    overflow: hidden;
+	
+}
+#holt-world a{
+	margin-right:10px;
+    color: #999;
+}
+#holt-world a:hover{
+   color: #ff6600;
+ }
+
+.search-ipt-default{
+    color: #c6c6c6;
+}
+
+.line-dotted {
+    border-top: 1px dotted #CCCCCC;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+.f14{
+    font-size: 14px;
+}
+.pt15{
+    padding-top: 15px;
+}
+
+.explan-nav{
+    position: absolute;
+    left: 0;
+    display: none;
+}
+.hiddenNav{
+    display: none;
+}
+.showNav{
+    display: block;
+}
+
+.info-page {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+}
+
+.info-page a:link, .info-page a:visited {
+    color: #005AA0;
+}
+.info-page a, .info-page span {
+    border: 1px solid #CCCCCC;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 2px;
+    overflow: hidden;
+    padding: 3px 10px;
+}
+
+        

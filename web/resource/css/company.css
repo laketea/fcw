@@ -1,0 +1,20 @@
+#company{position: relative;}
+#company .cur-nav{height: 35px;line-height: 35px;font-family: ËÎÌו;}
+#company #company-info{}
+#company-info .company-img{width: 233px;height: 233px;margin-right: 17px;border: 1px solid #cccccc;}
+#company-info .company-name{width: 440px;height: 28px;line-height: 20px;font-size: 14px;font-weight: bold;color:#000000;border-bottom: 1px solid #cccccc;margin-bottom: 5px;}
+#company-info .company-detail{width: 440px;height: 28px;line-height: 28px;}
+#company-info .company-intr-title{padding-top: 20px;height: 27px;line-height: 27px;width:737px;font-weight: bold;color:#000000;border-bottom: 1px solid #cccccc;margin-bottom: 5px;}
+#company-info .company-des{width: 737px;line-height: 2;min-height: 200px;}
+.last-visit ul{margin-top: 10px;width: 737px;margin-left: 5px;}
+.last-visit ul li{float: left;width: 35px;margin-right: 30px;}
+.last-visit ul li img{display: block;width: 35px;height: 35px;border: 1px solid #cccccc;}
+.last-visit ul li span{display: block;width: 35px;height: 25px;line-height: 25px;text-align: center;}
+.elite{position: absolute;top:35px;left: 750px;width: 210px;border: 1px solid #cccccc;}
+.elite h4{height: 33px;line-height: 33px;background: url("../img/yw-tj.png");border-bottom: 1px solid #cccccc;}
+.elite h4 span{margin-left: 10px;font-weight: bold;font-size: 14px;}
+.elite ul{padding-left: 15px;padding-top: 20px;}
+.elite ul li{margin-bottom: 15px;width: 150px;overflow: hidden;}
+.elite ul li .user-img{width: 50px;height: 45px;border: 1px solid #cccccc;margin-right: 10px;}
+.elite ul li .user-name{height: 23px;line-height: 23px;width: 75px;}
+.elite ul li .user-phone{height: 23px;line-height: 23px;width: 75px;}
